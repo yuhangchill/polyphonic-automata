@@ -2,6 +2,8 @@
 
 An interactive Web Audio prototype for exploring spatial, polyphonic relationships through Conway's Game of Life.
 
+[Live demo](https://chqiu666.github.io/polyphonic-automata/)
+
 The page runs as a small browser-based instrument: a cellular automata grid evolves in real time, and the viewer can click or drag directly on the matrix to add or remove cells while the system is running. The visual field is analyzed into audio nodes, then mapped to pitch, gain, filter movement, and stereo position.
 
 ## Concept
