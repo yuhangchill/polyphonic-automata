@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Polyphonic Automata - Spatial Audio Prototyper</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Polyphonic Automata</h1>
+        <p class="subtitle">System Architecture / Module 01: Visual to Spatial Router</p>
+      </header>
+
+      <section class="controls-grid" aria-label="Playback and view controls">
+        <div class="panel-section">
+          <span class="section-label">Playback Controls</span>
+          <div class="button-group">
+            <button id="runToggle" type="button">Pause</button>
+            <button id="stepButton" type="button">Step</button>
+            <button id="clear" type="button">Clear</button>
+            <button id="randomize" type="button">Randomize</button>
+            <button id="audioToggle" type="button">Audio</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <span class="section-label">Data View Mode</span>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="viewMode" value="raw" checked />
+              [01] Raw Matrix (Binary)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="viewMode" value="tail" />
+              [02] Audio Release Tail (Decay)
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="viewMode" value="blob" />
+              [03] Blob Clustering (Spatial Tracking)
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <canvas
+        id="lifeCanvas"
+        width="600"
+        height="400"
+        aria-label="Conway cellular automata grid"
+      ></canvas>
+
+      <div class="status-bar" aria-live="polite">
+        <span id="generationReadout">Frame: 0</span>
+        <span id="blobReadout">Active Audio Nodes: 0</span>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
